@@ -3,7 +3,7 @@ answer = 2 ** 5
 print(answer * 100)
 
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #   Read the 2 lines of code ABOVE this _TODO_.  That code:
 #     1. Computes 2 raised to the 5th power,
 #          yielding the object that is the integer 32.
@@ -18,9 +18,9 @@ print(answer * 100)
 #   Once you completely understand the above, run this module,
 #   confirming that it prints 3200.  Then change the above _TODO_ to DONE.
 ###############################################################################
-
+import math
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   Immediately below this _TODO_, write code that:
 #     - Computes 77 plus the cosine of 2.75.
 #         HINT: You will need to import the   math  module (library).
@@ -28,17 +28,21 @@ print(answer * 100)
 #     - Prints the square root of that computed value.
 #   Run your code (fix errors as needed), then change the above _TODO_ to DONE.
 ###############################################################################
-
+num = 77 + math.cos(2.75)
+print(num)
 ###############################################################################
-# TODO: 3.
+# DONE: 3.
 #   Immediately below this _TODO_, write code that computes and prints:
 #      the square root of ((41 * 88) + (4 * the cosine of 2))
 #   Use as few or as many intermediate names as you feel appropriate.
 #   Run your code (fix errors as needed), then change the above _TODO_ to DONE.
 ###############################################################################
-
+num2 = (41 * 88) + (4 * math.cos(2))
+num3 = math.sqrt(num2)
+print(num3)
+print(math.sqrt(num))
 ###############################################################################
-# TODO: 4.
+# DONE: 4.
 #   Immediately below this _TODO_,
 #   write code that computes the square root of 2 in two ways:
 #     - By using the   math.sqrt   function.
@@ -46,10 +50,11 @@ print(answer * 100)
 #   Print both of the expressions that you write.
 #   Run your code (fix errors as needed), then change the above _TODO_ to DONE.
 ###############################################################################
-
+print(math.sqrt(2))
+print(2 ** 0.5)
 
 ###############################################################################
-# TODO: 5.
+# DONE: 5.
 #   Every object has a TYPE and a VALUE.  For example,
 #   for the object that is computed by  math.sqrt(2):
 #      Its TYPE is float  (which is shorthand for "floating point number").
@@ -88,7 +93,31 @@ print(answer * 100)
 # After you have written and run the code to learn the TYPE
 # of each of the above, change the above _TODO_ to DONE.
 ###############################################################################
-
+print(type(3.14))
+print(type("hello"))
+# not exactly sure, it's an str
+print(type('hello'))
+# should be an str as well, it is
+print(type('a b c'))
+# should be an str as well I assume, it is
+print(type(3 + 3))
+# should be a floating character because It's a number, it's actually an integer
+print(type("3" + "3"))
+# not sure, this one is weird, it's an str
+print(type(2 ** 100))
+# i think It'll be an integer, it is one
+print(type(2.0 ** 100))
+# I assume it should be an integer as well, it's not! odd
+print(type(math.sin(8)))
+# Floating, correct
+print(type(math.sin))
+# float? yeah i figured it was something weird
+print(type(print))
+# function or method, correct
+print(type(math))
+# function or method?, module instead okay
+print(type('math'))
+# probably an str, it is one
 ###############################################################################
 #
 # TODO: 6.
