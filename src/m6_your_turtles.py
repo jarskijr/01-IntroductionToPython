@@ -8,9 +8,9 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 # DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
-import rosegraphics as mp
+
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -27,4 +27,28 @@ import rosegraphics as mp
 #
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 #
-########################################################################
+############## ##########################################################
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+orangeocta = rg.SimpleTurtle()
+orangeocta.pen = rg.Pen('orange',5)
+orangeocta.forward(20)
+
+window.tracer(20)
+
+bluehex = rg.SimpleTurtle()
+bluehex.pen = rg.Pen('blue', 5)
+bluehex.forward(30)
+
+for k in range(100):
+    bluehex.draw_regular_polygon(6,100)
+    bluehex.left(91)
+    bluehex.forward(k)
+
+    orangeocta.draw_regular_polygon(8,50)
+    orangeocta.left(45)
+    orangeocta.forward(k/2)
+
+
+window.close_on_mouse_click()
