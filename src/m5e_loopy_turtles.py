@@ -84,10 +84,10 @@ window.tracer(100)  # Bigger numbers make the animation run faster
 
 another_turtle = rg.SimpleTurtle('triangle')
 another_turtle.pen = rg.Pen('magenta', 1)
-another_turtle.backward(50)
+another_turtle.backward(25)
 
 # The name k takes on the values 0, 1, 2, ... 499 as the loop runs
-for k in range(500):
+for k in range(250):
     another_turtle.left(91)
     another_turtle.forward(k)
 
